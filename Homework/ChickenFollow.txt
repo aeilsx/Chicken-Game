@@ -1,0 +1,17 @@
+using UnityEngine; 
+using System.Collections; 
+ 
+public class ChickenFollow : MonoBehaviour { 
+ 
+  public int speed;
+    public GameObject player;
+    //figure out how to reference other variables in a script!
+    //also referencing other code?
+   
+    void Update () {
+        //ask about vectors
+        Vector3 localPosition = player.transform.position - transform.position;
+        localPosition = localPosition.normalized;
+        transform.Translate(localPosition.x * Time.deltaTime * speed, localPosition.y * Time.deltaTime * speed, localPosition.z * Time.deltaTime * speed);
+    }
+}
