@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour {
 	void Update () {
 		var j = Input.GetAxis("Jump")* Time.deltaTime * jumpHeight;
 		var y = Input.GetAxis("Horizontal")* Time.deltaTime * turnSpeed;
-		var z = Input.GetAxis("Vertical")* Time.deltaTime * jumpHeight;
+		var z = Input.GetAxis("Vertical")* Time.deltaTime * moveSpeed;
 
 
 		transform.Rotate(0,y,0);
