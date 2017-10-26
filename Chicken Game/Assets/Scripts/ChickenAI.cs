@@ -1,11 +1,12 @@
 ﻿using UnityEngine; 
 using System.Collections; 
 
-public class ChickenFollow : MonoBehaviour { 
+public class ChickenAI : MonoBehaviour { 
  
     public Rigidbody enemy;
     public float moveSpeed;
     public Transform target;
+    public Transform chickenPen;
     
    
     void OnTriggerStay(Collider other)
@@ -17,6 +18,14 @@ public class ChickenFollow : MonoBehaviour {
             transform.Translate(Vector3.back*moveSpeed*Time.deltaTime);
             }
     } 
+
+    void OnCollisionEnter(Collision other){
+        if(other.gameObject.name == "Player"){
+            // scoreManager.AddPoints(points);
+            transform.position = chickenPen.position;
+            transform.rotation = chickenPen.rotation;
+        }
+    }
         
 }
 //spice it up
