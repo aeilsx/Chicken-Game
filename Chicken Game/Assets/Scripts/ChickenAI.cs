@@ -7,8 +7,9 @@ public class ChickenAI : MonoBehaviour {
     public float moveSpeed;
     public Transform target;
     public Transform chickenPen;
+    public int points = 10;
     
-   
+   //Chicken run away trigger
     void OnTriggerStay(Collider other)
     {
 
@@ -18,10 +19,16 @@ public class ChickenAI : MonoBehaviour {
             transform.Translate(Vector3.back*moveSpeed*Time.deltaTime);
             }
     } 
+    
 
+    //Chicken random movement
+    //void 
+
+    //Chicken transport to pen
     void OnCollisionEnter(Collision other){
         if(other.gameObject.name == "Player"){
-            // scoreManager.AddPoints(points);
+            //Add points to score
+            scoreManager.AddPoints(points);
             transform.position = chickenPen.position;
             transform.rotation = chickenPen.rotation;
         }
