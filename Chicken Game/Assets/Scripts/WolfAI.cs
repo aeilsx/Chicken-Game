@@ -32,23 +32,23 @@ public class WolfAI: MonoBehaviour {
 
     // ***NOT WORKING***
     //Wolf damage script
-    void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.name == "Player"){
-            playerHealth.TakeDamage(damage);
+    // void OnCollisionEnter(Collision other)
+    // {
+    //     if(other.gameObject.name == "Player"){
+    //         playerHealth.TakeDamage(damage);
         
-        }
+    //     }
 
 
-        print("Wolf is attacking!");
-        var hit = other.gameObject;
-        var health = hit.GetComponent<playerHealth>();
+    //     print("Wolf is attacking!");
+    //     var hit = other.gameObject;
+    //     var health = hit.GetComponent<playerHealth>();
 
-        if(health != null){
-            health.TakeDamage(damage);
-        }
+    //     if(health != null){
+    //         health.TakeDamage(damage);
+    //     }
 
-    }
+    // }
    
         
 }
