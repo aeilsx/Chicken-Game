@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class Wander : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	public float moveSpeed;
+
+	void MoveForward(){
+		transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void Turn(){
+		int randomNum = Random.Range(0,360);
+		transform.Rotate(0,randomNum,0);
+	}
+
+	void OnTriggerStay(Collider other){
+		if(other.gameObject.tag ==	"CheckPoint"){
+			//transform.LookAt("CheckPoint");
+			Turn();
+		}
+		else{
+			MoveForward();
+		}
 	}
 }
