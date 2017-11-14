@@ -24,4 +24,11 @@ public class Wander : MonoBehaviour {
 			MoveForward();
 		}
 	}
+
+	//Trying to get the Checkpoint to move on it's own within a small area.
+	 void OnCollisionEnter(Collision other){
+        if(other.gameObject.name == "Chicken"){
+            transform.position = Random.Range(10,360);
+        }
+    }
 }

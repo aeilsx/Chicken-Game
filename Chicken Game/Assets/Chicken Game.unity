@@ -1139,6 +1139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1347629687}
   - component: {fileID: 1347629686}
+  - component: {fileID: 1347629688}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1171,6 +1172,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347629688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1347629685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc96cc3261440a42aec046b4e30961b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 10
+  hp: {fileID: 135181202}
+  maxHP: {fileID: 130682874}
 --- !u!1001 &1356800714
 Prefab:
   m_ObjectHideFlags: 0
@@ -1882,6 +1897,7 @@ MonoBehaviour:
   target: {fileID: 899038005}
   prey: {fileID: 354718132}
   damage: 1
+  pcHealth: {fileID: 1347629685}
 --- !u!1 &1857860532
 GameObject:
   m_ObjectHideFlags: 0
