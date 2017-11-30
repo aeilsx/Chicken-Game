@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class scoreManager : MonoBehaviour {
 
 	public static int score;
+	
+	public int scoreAmount = score;
 	public Text text;
 
 	void Start () {
@@ -20,6 +22,10 @@ public class scoreManager : MonoBehaviour {
 
 	public static void AddPoints(int pointsToAdd){
 		score += pointsToAdd;
+	}
+
+	public static void SubtractPoints(int pointsToSubtract){
+		score -= pointsToSubtract;
 	}
 
 	public void Reset() {
