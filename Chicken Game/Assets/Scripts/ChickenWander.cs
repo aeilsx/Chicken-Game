@@ -9,7 +9,7 @@ public class ChickenWander : MonoBehaviour {
 
 	void Start(){
 		MoveForward();
-		countDown = Random.Range(0.5f,3f);
+		countDown = Random.Range(0.5f,5f);
 	}
 
 	void MoveForward(){
@@ -25,7 +25,7 @@ public class ChickenWander : MonoBehaviour {
 		countDown -= Time.deltaTime;
 		MoveForward();
 		if(countDown <= 0){
-			countDown = Random.Range(0.5f,3f);
+			countDown = Random.Range(0.5f,5f);
 			Turn();
 			moveSpeed = Random.Range(2f,5f);
 		}

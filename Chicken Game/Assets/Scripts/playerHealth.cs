@@ -10,6 +10,8 @@ public class playerHealth : MonoBehaviour {
 	public Text hp;
 	public Text maxHP;
 
+	public bool gameover = false;
+
 	
 	void Update () {
 		hp.text = currentHealth.ToString();
@@ -20,6 +22,7 @@ public class playerHealth : MonoBehaviour {
 		currentHealth -= amount;
 		if(currentHealth<= 0){
 			currentHealth = 0;
+			gameover = true;
 			print("You're Dead! GAME OVER!");
 		}
 	}

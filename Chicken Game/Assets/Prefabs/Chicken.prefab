@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114382642321216742}
   - component: {fileID: 65594423351815776}
   - component: {fileID: 54380850900040722}
+  - component: {fileID: 114724362147442396}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -138,3 +139,17 @@ MonoBehaviour:
   moveSpeed: 8
   target: {fileID: 0}
   chickenPen: {fileID: 0}
+  points: 10
+--- !u!114 &114724362147442396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918967227069310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f4f2eb8902db149b9b18c089f6b979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  countDown: 0
