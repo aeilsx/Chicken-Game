@@ -9,10 +9,12 @@ public class scoreManager : MonoBehaviour {
 	public int winScore;
 	public Text text;
 	public Text winText;
+	public Text runText;
 	public bool run = false;
 
 	void Start () {
 		winText.GetComponent<Text>().enabled = false;
+		runText.GetComponent<Text>().enabled = false;
 		text = GetComponent<Text>();
 		score = 0;
 	}
@@ -34,9 +36,13 @@ public class scoreManager : MonoBehaviour {
 			SceneManager.LoadScene(0);
 		}
 
-		if(score >= 10){
+		//Zombie chase intiate
+		if(score >= 80){
 			run = true;
+			runText.GetComponent<Text>().enabled = true;
 		}
+
+
 
 	}
 

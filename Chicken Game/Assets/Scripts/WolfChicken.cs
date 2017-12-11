@@ -1,27 +1,30 @@
-﻿using UnityEngine.UI; 
-using System.Collections; 
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class WolfAI: MonoBehaviour { 
- 
+public class WolfChicken : MonoBehaviour {
+
     //public Rigidbody enemy;
     public float moveSpeed;
-    public Transform target;
+
+    public Transform prey;
+
     public int damage;
 
     public GameObject pcHealth;
     
    
-   //Chase Script
+   //Chase Scripts
     void OnTriggerStay(Collider other)
     {
-        //Chase the player
-        if(other.gameObject.name == "Player"){
-            Debug.Log("Player has entered wolfs trigger");
-            transform.LookAt(target);
+
+        //Chase the chicken
+        if(other.gameObject.name == "Chicken"){
+			//Debug.Log("Chicken has entered wolfs trigger");
+            transform.LookAt(prey);
             transform.Translate(Vector3.back*-moveSpeed*Time.deltaTime);
             }
-
+			
     } 
 
     //Wolf damage script
